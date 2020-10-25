@@ -9,7 +9,7 @@ app = Client(session_string, api_id, api_hash)
 
 with app:
     n = 0
-    while n < 4:
+    while n < 20:
         # Send message with 5 seconds interval
         print("Waiting...")
         time.sleep(5)
