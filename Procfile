@@ -1,1 +1,1 @@
-worker: python3 send-message-pyro.py
+worker: python3 send-message-pyrogram.py
