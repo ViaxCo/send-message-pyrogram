@@ -11,9 +11,9 @@ with app:
     n = 0
     while n < 3:
         # Send message with 10 minutes interval
+        app.send_message("me", f"Heroku test no. {n}...")
+        
+        print("Message sent successfully!")
         print("Waiting...")
         time.sleep(600)
-        
-        app.send_message("me", f"Heroku test no. {n}...")
-        print("Message sent successfully!")
         n += 1
