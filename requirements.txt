@@ -1,3 +1,4 @@
 pyrogram
 TgCrypto
 schedule
+python-dotenv
