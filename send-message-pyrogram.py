@@ -1,6 +1,9 @@
-from pyrogram import Client
-import time
 import schedule
+import time
+from pyrogram import Client
+from os import environ
+from dotenv import load_dotenv
+load_dotenv()
 
 api_id = int(environ["API_ID"])
 api_hash = environ["API_HASH"]
@@ -33,8 +36,8 @@ def job():
 
 
 # schedule.every().day.at("10:30").do(job)
-# schedule.every(5).seconds.do(job)
-schedule.every(30).minutes.do(job)
+schedule.every(5).seconds.do(job)
+# schedule.every(30).minutes.do(job)
 # schedule.every().hour.do(job)
 # schedule.every().monday.do(job)
 # schedule.every().wednesday.at("13:15").do(job)
