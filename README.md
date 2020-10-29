@@ -4,6 +4,12 @@ A python script used to automatically send/schedule messages to users periodical
 
 ## Installation
 
+### Simple installation
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ViaxCo/send-message-pyrogram/tree/main)
+
+### Manual installation
+
 You can clone the repo:
 
 ```bash
