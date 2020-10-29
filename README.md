@@ -21,7 +21,7 @@ On your local system, you can create a `.env` file to store your environment var
 To generate the `session_string`, run:
 
 ```bash
-python3 GenerateStringSession.py
+python3 GenerateSessionString.py
 ```
 
 This will lead you to input your phone number and authenticate yourself with Telegram if you haven't already, and proceed to print your session string, which you should copy and place in the `SESSION_STRING` variable in your `.env` file.
