@@ -40,11 +40,50 @@ You can run the program using:
 python3 send-message-pyrogram.py
 ```
 
-To change the receiver of the message, simply change "me" to the id or name of the contact you wish to send the message to:
+To change the receiver of the message, simply change the number to the id of the contact you wish to send the message to:
 
-```bash
-app.send_message("me", "Your message")
+```python
+app.send_message(1234567890, "Your message")
 ```
+
+To get the id of the contact you wish to send the message to, you can do this by getting all the contacts, printing them to a `.json` file and searching for the contact in the file by name and copying the id from there.
+
+```python
+with app:
+    f = open("contacts.json", "a")
+    f.write(str(app.get_contacts()))
+    f.close()
+```
+
+In your `contacts.json` file, a user would look like this:
+
+```json
+{
+  "_": "User",
+  "id": 1234567890,
+  "is_self": false,
+  "is_contact": true,
+  "is_mutual_contact": true,
+  "is_deleted": false,
+  "is_bot": false,
+  "is_verified": false,
+  "is_restricted": false,
+  "is_scam": false,
+  "is_support": false,
+  "first_name": "Contact name",
+  "status": "offline",
+  "last_online_date": "2020-01-15 09:20:30",
+  "dc_id": 4,
+  "phone_number": "*************",
+  "photo": {
+    "_": "ChatPhoto",
+    "small_file_id": "CQADBCADrKcxGyZjUyMACCkTqhsABAIAAyZjUyMABBQv95-EGuw8RNcCAAEWBD",
+    "big_file_id": "CQADBCADrKcxGyZjUyMACCkTqhsABAMAAyZjUyMABBQv95-EGuw8RtcCAAEWBD"
+  }
+}
+```
+
+You can then copy the `id` of the contact and use it.
 
 ### To change frequency of the messages
 
