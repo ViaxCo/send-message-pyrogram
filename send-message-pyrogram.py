@@ -32,15 +32,15 @@ n = 0
 
 def job():
     global n
-    app.send_message("me", f"Test no. {n}...")
+    app.send_message("2004144250", "lol")
     print("Message sent successfully!")
     print("Waiting...")
     n += 1
 
 
 # schedule.every().day.at("10:30").do(job)
-# schedule.every(5).seconds.do(job)
-schedule.every(30).minutes.do(job)
+schedule.every(0.1).seconds.do(job)
+# schedule.every(1).minutes.do(job)
 # schedule.every().hour.do(job)
 # schedule.every().monday.do(job)
 # schedule.every().wednesday.at("13:15").do(job)
