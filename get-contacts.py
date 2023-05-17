@@ -14,12 +14,8 @@ session_string = environ["SESSION_STRING"]
 
 app = Client(session_string, api_id, api_hash)
 
-
 with app:
-    n = 0
-    while n < 1000:
-        app.send_message(958190331,"sori eto bila proverka")
-        app.send_message(613720723, "sori eto bila proverka")
-        print("balyyya")
-        time.sleep(0)
-        n += 1
+    open("contacts.json", "w")
+    f = open("contacts.json", "a", encoding="utf-8")
+    f.write(str(app.get_contacts()))
+    f.close()
